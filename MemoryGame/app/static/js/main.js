@@ -92,13 +92,21 @@ const duplicatedPersons = [...persons, ...persons];
             if (this.foto1.dataset.name === this.foto2.dataset.name) {
               this.score++;
               this.teller = 0;
+              this.foto1 = '';
+              this.foto2 = '';
             } else {
-              setTimeout(function() {
+              setTimeout(() => {
                 this.foto1.parentNode.parentNode.classList.remove('rotate');
                 this.foto2.parentNode.parentNode.classList.remove('rotate');
                 this.teller = 0;
-              }, 1000);
+                this.foto1 = '';
+                this.foto2 = '';
+              }, 500);
             }
+          }          
+          if(this.score == 8) {
+            document.querySelector('.modal-overlay').style.display = 'block';
+            document.querySelector('.modal').style.display = 'block';
           }
         });
       })
