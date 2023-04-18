@@ -31,6 +31,10 @@ const persons = [
     name: 'Mila',
     img: './static/assets/img/mila.jpg',
   },  
+  {
+    name: 'Philippe',
+    img: './static/assets/img/philippe.webp',
+  }
 ];
 
 const duplicatedPersons = [...persons, ...persons];
@@ -66,7 +70,7 @@ const duplicatedPersons = [...persons, ...persons];
         tmpStr += `
         <div class="card">
           <div class="card-front" data-name="${object.name}">
-            <img class="card-img" data-name="${object.name}" src="static/assets/img/logo.svg" alt="content picture">
+            <img class="card-logo" data-name="${object.name}" src="static/assets/img/logo.svg" alt="content picture">
           </div>
           <div class="card-back" data-name="${object.name}">
             <img class="card-img" data-name="${object.name}" src="${object.img}" alt="content picture">
@@ -104,7 +108,7 @@ const duplicatedPersons = [...persons, ...persons];
               }, 500);
             }
           }          
-          if(this.score == 8) {
+          if(this.score == 9) {
             document.querySelector('.modal-overlay').style.display = 'block';
             document.querySelector('.modal').style.display = 'block';
           }
