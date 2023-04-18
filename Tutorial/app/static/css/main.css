@@ -1,0 +1,30 @@
+.title--header {
+    position: relative;
+    background: #000000
+}
+.title--header h2, h1 {
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    font: 16px/32px 'Roboto', sans-serif;
+    padding: 30px 0;
+    text-transform: uppercase;
+}
+.title--header h1 {
+    font: 30px'Roboto', sans-serif;
+    padding: 0;
+    padding-top: 50px;
+}
+.title--header a {
+    position: absolute;
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+    top: 1rem;
+    left: 1rem;
+}
+main {
+    height: 500vh;
+    background: rgb(58,134,255);
+    background: linear-gradient(90deg, rgba(58,134,255,1) 0%, rgba(255,0,110,1) 100%);
+}
