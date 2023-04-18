@@ -60,6 +60,14 @@ const duplicatedPersons = [...persons, ...persons];
       this.$cards = document.querySelector('.cards');
     },
     generateUI () {
+      setTimeout(() => {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card) => {
+          card.classList.remove('rotate');
+        })
+      }, 3000);
+      
+      
       let tmpStr = '';
       
       for (let i = duplicatedPersons.length - 1; i > 0; i--) {
@@ -68,7 +76,7 @@ const duplicatedPersons = [...persons, ...persons];
       }
       duplicatedPersons.map(object => {
         tmpStr += `
-        <div class="card">
+        <div class="card rotate">
           <div class="card-front" data-name="${object.name}">
             <img class="card-logo" data-name="${object.name}" src="static/assets/img/logo.svg" alt="content picture">
           </div>
