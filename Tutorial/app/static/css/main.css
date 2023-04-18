@@ -2,7 +2,7 @@
     position: relative;
     background: #000000
 }
-.title--header h2, h1 {
+.title--header h2, .title--header h1 {
     text-align: center;
     overflow: hidden;
     color: #fff;
@@ -27,4 +27,44 @@ main {
     height: 500vh;
     background: rgb(58,134,255);
     background: linear-gradient(90deg, rgba(58,134,255,1) 0%, rgba(255,0,110,1) 100%);
+    font-family: 'Poppins';
+}
+
+main section {
+    width: 70%;
+    margin: auto;
+    color: white;
+    padding-top: 2rem;
+}
+main section .header--tutorial {
+    display: flex;
+    justify-content: space-between;
+}
+main section .header--tutorial div{
+    background-color: white;
+    padding: 0.5rem;
+}
+main section h3 {
+    font-family: 'Poppins';
+}
+.gameImage {
+    width: 60%;
+    margin: 2rem auto;
+    
+}
+.gameImage img{
+    box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+}
+main section + div {
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+/* stappen */
+
+.stap h1 {
+    text-transform: uppercase;
+}
+.stap p a {
+    color: #FFBE0B;
 }

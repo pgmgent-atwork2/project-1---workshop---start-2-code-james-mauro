@@ -131,3 +131,12 @@ h1 {
   text-align: center;
   text-decoration: none;
 }
+.tutorial--link{
+    color: white;
+    margin-top: 1rem;
+    position: absolute;
+    top: 1rem;
+}
+.tutorial--link:hover{
+    text-decoration: none;
+}
