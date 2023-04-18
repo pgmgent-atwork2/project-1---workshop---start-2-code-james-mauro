@@ -40,6 +40,10 @@ const duplicatedPersons = [...persons, ...persons];
     init () {
       console.log('1. Application Initialized!');
       // Variables
+      this.teller = 0;
+      this.score = 0;
+      this.foto1 = 0;
+      this.foto2 = 0;
       // Call the function cacheElements
       this.cacheElements();
       // Call the function generateUI
@@ -49,7 +53,7 @@ const duplicatedPersons = [...persons, ...persons];
     },
     cacheElements () {
       console.log('2. Chache the elements!');
-      this.$cards = document.querySelector('.cards');
+      this.$cards = document.querySelector('.flip-card');
     },
     generateUI () {
       let tmpStr = '';
@@ -60,19 +64,43 @@ const duplicatedPersons = [...persons, ...persons];
       }
       duplicatedPersons.map(object => {
         tmpStr += `
-          <div class="card" data-name="${object.name}">
-              <img src="${object.img}" alt="content picture">
-          </div>`;
+        <div class="flip-card-inner">
+          <div class="flip-card-front" data-name="${object.name}">
+            <img class="card--img" data-name="${object.name}" src="static/assets/img/logo.svg" alt="content picture">
+          </div>
+          <div class="flip-card-back" data-name="${object.name}">
+            <img class="card--img" data-name="${object.name}" src="${object.img}" alt="content picture">
+          </div> 
+        </div>  
+        `;
       });      
       this.$cards.innerHTML = tmpStr;
     },
     async addEventListeners () {
-      const cards = document.querySelectorAll('.card');
-      console.log(cards)
+      const cards = document.querySelectorAll('.flip-card-inner');
       cards.forEach((card) => {
         card.addEventListener('click', (ev) => {
-          console.log(ev.srcElement.dataset.name);
-        })
+          this.teller++;
+          const parent = ev.target.parentNode.parentNode;
+          parent.classList.add('rotate');
+          if (this.teller == 1) {
+            this.foto1 = ev.target;
+          } 
+          if (this.teller == 2) {
+            this.foto2 = ev.target
+            console.log(this.foto1, this.foto2, this.teller);
+            if (this.foto1.dataset.name === this.foto2.dataset.name) {
+              this.score++;
+              this.teller = 0;
+            } else {
+              setTimeout(function() {
+                this.foto1.parentNode.parentNode.classList.remove('rotate');
+                this.foto2.parentNode.parentNode.classList.remove('rotate');
+                this.teller = 0;
+              }, 1000);
+            }
+          }
+        });
       })
     },
   };
