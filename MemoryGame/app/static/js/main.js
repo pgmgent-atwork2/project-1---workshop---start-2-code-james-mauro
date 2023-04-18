@@ -53,7 +53,7 @@ const duplicatedPersons = [...persons, ...persons];
     },
     cacheElements () {
       console.log('2. Chache the elements!');
-      this.$cards = document.querySelector('.flip-card');
+      this.$cards = document.querySelector('.cards');
     },
     generateUI () {
       let tmpStr = '';
@@ -64,12 +64,12 @@ const duplicatedPersons = [...persons, ...persons];
       }
       duplicatedPersons.map(object => {
         tmpStr += `
-        <div class="flip-card-inner">
-          <div class="flip-card-front" data-name="${object.name}">
-            <img class="card--img" data-name="${object.name}" src="static/assets/img/logo.svg" alt="content picture">
+        <div class="card">
+          <div class="card-front" data-name="${object.name}">
+            <img class="card-img" data-name="${object.name}" src="static/assets/img/logo.svg" alt="content picture">
           </div>
-          <div class="flip-card-back" data-name="${object.name}">
-            <img class="card--img" data-name="${object.name}" src="${object.img}" alt="content picture">
+          <div class="card-back" data-name="${object.name}">
+            <img class="card-img" data-name="${object.name}" src="${object.img}" alt="content picture">
           </div> 
         </div>  
         `;
@@ -77,7 +77,7 @@ const duplicatedPersons = [...persons, ...persons];
       this.$cards.innerHTML = tmpStr;
     },
     async addEventListeners () {
-      const cards = document.querySelectorAll('.flip-card-inner');
+      const cards = document.querySelectorAll('.card');
       cards.forEach((card) => {
         card.addEventListener('click', (ev) => {
           this.teller++;
