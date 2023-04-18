@@ -11,7 +11,7 @@
     text-transform: uppercase;
 }
 .title--header h1 {
-    font: 30px'Roboto', sans-serif;
+    font: 40px 'Poppins';
     padding: 0;
     padding-top: 50px;
 }
@@ -27,4 +27,12 @@ main {
     height: 500vh;
     background: rgb(58,134,255);
     background: linear-gradient(90deg, rgba(58,134,255,1) 0%, rgba(255,0,110,1) 100%);
+    
+}
+main section {
+    width: 70%;
+    margin: auto;
+}
+main section h4{
+    color: white;
 }
