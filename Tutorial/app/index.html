@@ -45,15 +45,64 @@
             <img src="../app/static/assets/img/game.png" alt="game image">
         </div>
         <section class="stap">
-            <h1>Stap 1 - Werkstructuur klaarmaken </h1>
+            <h1 class="title--stap">Stap 1 - Werkstructuur klaarmaken </h1>
             <p>We gebruiken <a target="_blank" href="https://code.visualstudio.com/download">Visual Studio Code</a> om onze code te schrijven</p>
             <ul>
                 <li><strong>1.1</strong> - Startcode downloaden, en de zip uitpakken</li>
-                <button><a href = "../" download="Startcode_MemoryGame">download de startcode</button>
+                <button><a href="../../MemoryGame/app/static/assets/startcode.zip" download="Startcode_MemoryGame">download de startcode</a></button>
             </ul>
-            <img src="" alt="">
+            <div class="startcodeImage">
+                <img src="../app/static/assets/img/startcode.png" alt="startcode image">
+            </div>  
+            <ul>
+                <li><strong>1.2</strong> - Open de uitgepakte folder in Visual Studio Code </li>
+                <li><strong>1.3</strong> - Installeer de live server extensie en start de live server recht onder in de blauwe balk</li>
+            </ul>
+            <div class="liveServer">
+                <img src="../app/static/assets/img/live-server.png" alt="live server image">
+            </div>
         </section>
-    </main>
+        <section class="stap2">
+            <h1 class="title--stap">stap 2 - beginnen met coderen</h1>
+            <p>Nu komt het echte werk. We gaan een beetje code schrijven zodat we al iets kunnen zien in onze browser.</p>
+            <ul>
+                <li><strong>2.1</strong> - Ga naar je <em>index.html</em> bestand, schrijf vervolgens in het bestand <em>!</em> en druk op enter. Normaal krijg je dan je begin code.</li>
+                <li><strong>2.2</strong> - Vervolgens schrijf je de onderstaande code tussen de body tags van je startcode "< body >...< /body >".</li>
+                <div>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/maurocoone/f1ozcn6m/3/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <p>hier schrijven we eigenlijk onze html. <br>We maken een div waar alles gaat inzitten de h1 op lijn 3 is onze titel. We hebben een div met class cards. Deze gaat later vervangen worden door onze javascript en hierin zullen ook onze kaartjes komen. <br>De modal-overlay is het scherm dat we zullen krijgen als we alle kaartjes juist omgedraaid hebben. <br>Op de onderste lijn linken we gewoon ons javascript bestand</p>
+                </div>
+                <li><strong>2.3</strong> - Onderstaande stukje code kan je kopieeren en plakken in je <em>main.css</em> file</li>
+                <p>Dit is eigenlijk een klein stukje css met algemene code die we veel zullen gebruiken.</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/maurocoone/f1ozcn6m/1/embedded/css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <li><strong>2.4</strong> - Dit stukje code mag gekopieerd worden en geplakt worden in het <em>main.js</em> bestand</li>
+                <p>Wat we hier eigenlijk doen is het maken van een array met als naan "persons" met hierin allemaal verschillende objecten waarbij elk object een naam en een image bevat. Dit is de image die zal te zien zijn bij het draaien van het kaartje. we dupliceren deze array omdat er dus 2x dezelfde foto in het spel moet zitten.</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/maurocoone/f1ozcn6m/7/embedded/js,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            </ul>
+
+        </section>
+        <section class="stap3">
+            <h1 class="title--stap">stap 3 - Nu kleine pauze .... BAAAA nee verder met coderen :))</h1>
+            <p>tot nu toe hebben we in onze 3 bestanden dat we gaan gebruiken al "iets" van code geschreven. TOP! <br>Dan kunnen we nu verder.</p>
+            <ul>
+                <li><strong>3.1</strong> - Deze code mag gekopieerd worden en geplakt worden in het <em>main.js</em> bestand onder hetgene wat er al staat</li>
+                <p>In deze JavaScript code maken we onze constante aan genaamd app, hierin zal alle code komen om ons spel te laten werken.</p>
+                <p>We maken hier onze variabelen aan en roepen onze functies op. Ook zien we de html die zal gebruikt worden voor 1 kaartje.</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/maurocoone/f1ozcn6m/8/embedded/js,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <li><strong>3.2</strong> - Hieronder zoveel code denk je waarschijnlijk, kopieer deze in de <em>main.css</em>.</li>
+                <p>Deze code is nodig om heel ons spel er visueel mooi uit te laten zien. Je kan later zelf nog gaan spelen met alle kleurtjes enzo voort.</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/maurocoone/f1ozcn6m/10/embedded/css/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <li><strong>3.3</strong> - Bij deze het laatste stukje code voor onze game. Kopieer deze nog in het <em>main.js</em> bestand (onder het gene wat we al hebben)</li>
+                <p>Hier gaan we eigenlijk gaan zeggen wat er moet gebeuren als we op een kaartje drukken. Het moet ten eerste rotate en dan moet het gaan vergelijken met de andere kaartjes enzo voort. Allemaal functies die doorlopen worden van als we op het kaartje drukken.</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/maurocoone/f1ozcn6m/12/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            </ul>
+
+        </section>
+    </main> 
+    <footer>
+        <p>Nu kan je de game naar je eigen goesting gaan designen of gaan veranderen. Hartelijk bedankt om onze game te maken en te spelen!!</p>
+        <p>groetjes Mauro & James</p>
+    </footer>
 </body>
 
 </html>

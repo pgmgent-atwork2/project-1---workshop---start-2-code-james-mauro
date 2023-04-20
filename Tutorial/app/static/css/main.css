@@ -22,9 +22,9 @@
     cursor: pointer;
     top: 1rem;
     left: 1rem;
+    font-family: 'Poppins';
 }
 main {
-    height: 500vh;
     background: rgb(58,134,255);
     background: linear-gradient(90deg, rgba(58,134,255,1) 0%, rgba(255,0,110,1) 100%);
     font-family: 'Poppins';
@@ -62,9 +62,69 @@ main section + div {
 }
 /* stappen */
 
-.stap h1 {
+.title--stap {
     text-transform: uppercase;
 }
 .stap p a {
     color: #FFBE0B;
+}
+.stap ul button {
+    margin-top: 0.5rem;
+    border: 2px solid white;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.stap ul button:hover{
+    background-color: transparent;
+}
+.stap ul button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+}
+.stap ul button:hover a{
+    color: white;
+}
+.startcodeImage {
+    width: 50%;
+    margin: 2rem 0 2rem 5rem;
+}
+.stap img {
+    box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+}
+.liveServer {
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+ul li em {
+    color: #FFBE0B;
+    font-weight: 1000;
+    font-style: normal;
+}
+.stap2 ul li + div{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.stap2 ul li + div p{
+    font-size: 0.9rem;
+}
+ul p {
+    font-size: 0.8rem;
+    line-height: 2;
+}
+ul iframe{
+    margin-top: 1rem;
+}
+footer{
+    height: 5rem;
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+    font-family: 'Poppins'
 }
