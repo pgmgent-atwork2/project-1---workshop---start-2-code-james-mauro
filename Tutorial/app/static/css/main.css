@@ -121,6 +121,7 @@ ul p {
 }
 ul iframe{
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 footer{
     height: 5rem;
