@@ -8,3 +8,5 @@ We hebben eigenlijk een kleine memory game gemaakt waarbij het de bedoeling is d
 
 ## De bedoeling van het spel is: 
 om alle paren te vinden door kaarten om te draaien en ze te matchen voordat de tijd om is. Memory games kunnen niet alleen leuk zijn om te spelen, maar ook nuttig zijn als educatief hulpmiddel om kinderen te helpen nieuwe informatie te leren en te onthouden, zoals letters, cijfers, woorden, afbeeldingen en concepten.
+
+https://www.figma.com/file/RpDE7ocWVUfij3eoNKjLec/Brainstorm-FigJam-file?node-id=1%3A279&t=vOFktpU3o1MH5hbM-1
